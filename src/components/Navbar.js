@@ -1,7 +1,7 @@
-const Navbar = ({businessName, logo}) => {
+const Navbar = ({businessName, logoURL}) => {
     return ( 
         <nav>
-        <div className="logo"><p>Logo</p></div>
+        <div className="logo"><img src={logoURL} alt="logo" /></div>
 
         <div className="business-name">{businessName}</div>
 

@@ -11,7 +11,7 @@ import TicketView from './screens/TicketView'
 function App() {
   return (
     <Router>
-      <Navbar businessName={'Business name'} />
+      <Navbar businessName={'Business name'}  />
 
       <Routes>
 

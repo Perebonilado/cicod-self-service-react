@@ -77,6 +77,12 @@ nav .logo{
     font-size: 9px;
 }
 
+nav .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
 nav .logo p {
     font-weight: bold;
     color: var(--grey3);
