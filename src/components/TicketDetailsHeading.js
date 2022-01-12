@@ -1,14 +1,15 @@
 import { useContext } from "react";
-import StatusHistoryContext from "../screens/StatusHistory"
+import {StatusHistoryContext} from "../StatusHistoryContext"
 
 const TicketDetailsHeading = ({handleContentBx}) => {
-    const { ticketContentStatus, setTicketContentStatus } = useContext(StatusHistoryContext)
+    const { ticketContentStatus } = useContext(StatusHistoryContext)
     
     
     return ( 
         <div className="td-heading-bx" onClick={handleContentBx}>
             <h3>Ticket Details </h3>
-            <i className="far fa-chevron-down"></i>
+            {ticketContentStatus && <ChevronUp />}
+            {ticketContentStatus || <ChevronDown />}
         </div>
      );
 }
@@ -19,7 +20,6 @@ const ChevronUp = () => {
 
 const ChevronDown = () => {
     return (<i className="far fa-chevron-down"></i>)
-}
- 
+}  
  
 export default TicketDetailsHeading;

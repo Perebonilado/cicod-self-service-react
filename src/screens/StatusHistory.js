@@ -5,8 +5,9 @@ import ResponseBx from '../components/ResponseBx'
 import SenderMessageBx from '../components/SenderMessageBx'
 // import TicketDetailsHeading from "../components/TicketDetailsHeading";
 import TicketDetailsContent from "../components/TicketDetailsContent";
-
-const StatusHistoryContext = React.createContext()
+import { StatusHistoryContext } from "../StatusHistoryContext";
+import TicketDetailsHeading from "../components/TicketDetailsHeading";
+// const StatusHistoryContext = React.createContext()
 
 const StatusHistory = () => {
 
@@ -219,26 +220,6 @@ const StatusHistory = () => {
         </StatusHistoryContext.Provider> );
     }
 
-    const TicketDetailsHeading = ({handleContentBx}) => {
-        const { ticketContentStatus } = useContext(StatusHistoryContext)
-        
-        
-        return ( 
-            <div className="td-heading-bx" onClick={handleContentBx}>
-                <h3>Ticket Details </h3>
-                {ticketContentStatus && <ChevronUp />}
-                {ticketContentStatus || <ChevronDown />}
-            </div>
-         );
-    }
-    
-    const ChevronUp = () => {
-        return ( <i className="far fa-chevron-up"></i> );
-    }
-    
-    const ChevronDown = () => {
-        return (<i className="far fa-chevron-down"></i>)
-    }
     
   
 
