@@ -10,7 +10,7 @@ const ResponseBx = ({ date, time, message, attachment }) => {
     <div className="message-bx sh-mb">{message}</div>
 
     <div className="attach-bx">
-        <div className="bold-text"><img src="./images/Group 7894.svg" alt="attatch document" /> Attachments</div>
+        <div className="bold-text"><img src="https://res.cloudinary.com/dt0wfaxft/image/upload/v1641987482/Group_7894_rquput.svg" alt="attatch document" /> Attachments</div>
         <div className="blue-text">{attachment}</div>
     </div>
 

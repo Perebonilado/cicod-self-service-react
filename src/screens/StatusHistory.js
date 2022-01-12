@@ -1,13 +1,14 @@
 import Idheading from "../components/Idheading";
 import React, { useState, useEffect, useReducer, useContext } from 'react'
 import AddMessageBx from '../components/AddMessageBx'
-import ResponseBx from '../components/ResponseBx'
-import SenderMessageBx from '../components/SenderMessageBx'
-// import TicketDetailsHeading from "../components/TicketDetailsHeading";
+import StatusDateBx from "../components/StatusDateBx";
+import ResponseBx from '../components/ResponseBx';
+import SenderMessageBx from '../components/SenderMessageBx';
 import TicketDetailsContent from "../components/TicketDetailsContent";
 import { StatusHistoryContext } from "../StatusHistoryContext";
 import TicketDetailsHeading from "../components/TicketDetailsHeading";
-// const StatusHistoryContext = React.createContext()
+import StatusHistoryThread from "../components/StatusHistoryThread";
+
 
 const StatusHistory = () => {
 
@@ -58,12 +59,40 @@ const StatusHistory = () => {
     const [newMsg, setNewMsg] = useState('')
     const [ticketContentStatus, setTicketContentStatus] = useState(true)
     const [customerInfo, setCustomerInfo] = useState('')
+    const [ticketsArray, setTicketsArray] = useState([])
 
     const ticketInfo = {
         ticketId: '923412',
         ticketStatus: 'Under Investigation',
         date: '20-12-18:3:00'
     }
+
+    const ticketsArrayData = [
+        {
+            id: '1234',
+            status: 'Open',
+            date: '20-12-18',
+            time: '18:3:00',
+            comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta eius fugiat!'
+        },
+        
+        {
+            id: '4321',
+            status: 'Open',
+            date: '20-12-18',
+            time: '18:3:00',
+            comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta eius fugiat!'
+        },
+
+        {
+            id: '5678',
+            status: 'Open',
+            date: '20-12-18',
+            time: '18:3:00',
+            comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta eius fugiat!'
+        },
+
+    ]
 
     
     useEffect(() => {
@@ -92,6 +121,11 @@ const StatusHistory = () => {
 
        setCustomerInfo((prevState)=>{
            prevState = customerTicketDetails
+           return prevState
+       })
+
+       setTicketsArray((prevState)=>{
+           prevState = ticketsArrayData
            return prevState
        })
 
@@ -145,7 +179,7 @@ const StatusHistory = () => {
 
 
     return ( 
-    <StatusHistoryContext.Provider value={{ticketContentStatus, setTicketContentStatus}}>
+    <StatusHistoryContext.Provider value={{ticketContentStatus, ticketsArray}}>
 <Idheading ticketId={ticketId} />
 
 <section className="con-container">
@@ -160,18 +194,7 @@ const StatusHistory = () => {
 
             <div className="cs-title bold-text">Current Status</div>
 
-            <div className="status-date-bx">
-                <div className="status-bx">
-                    <div className="bold-text">Status</div>
-                    <div>{status}</div>
-                </div>
-
-                <div className="date-bx">
-                    <div className="bold-text">Date & Time</div>
-                    <div className="date">{date}</div>
-                </div>
-
-            </div>
+            <StatusDateBx status={status} date={date}/>
 
             <div className="conversation-container">
                 <div className="bold-text">Conversation</div>
@@ -216,6 +239,15 @@ const StatusHistory = () => {
             subCategory={customerInfo.subCategory}
              />}
         </section>
+
+        <section id="sh-thread"  className="status-history-container">
+        
+     <div className="sh-heading-bx">
+            <h3>Status History</h3>
+            <p>If you have questions or issues with this ticket, <b>reply on the comment section on the Current Status</b></p>
+    </div>
+        <StatusHistoryThread />
+    </section>
 
         </StatusHistoryContext.Provider> );
     }

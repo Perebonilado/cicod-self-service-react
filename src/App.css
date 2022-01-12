@@ -595,6 +595,9 @@ footer>p{
     border: 1px solid black;
     border: none;
     border-left: 2px solid var(--grey3);
+    /* border: 1px solid red; */
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 #sh-thread ul li:last-child {
@@ -607,7 +610,7 @@ footer>p{
 }
 
 #sh-thread ul li:last-child {
-    padding-bottom: 0;
+    padding-bottom: 2rem;
     background: none;
 }
 
@@ -615,12 +618,10 @@ footer>p{
     /* position: relative; */
     bottom: 0;
     padding-left: 2rem;
-    padding-bottom: 2rem;
-    /* width: 55rem; */
 }
 
 #sh-thread li img {
-    margin-left: -14px;
+    margin-left: -47px;
     border-radius: 50%;
     background-color: #fff;
 }

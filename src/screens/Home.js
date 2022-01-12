@@ -21,7 +21,7 @@ const Home = () => {
         <section className="main-content">
 
 <div>
-    <img src="" alt="computer" />
+    <img src="https://res.cloudinary.com/dt0wfaxft/image/upload/v1641987362/Group_7886_sjnm4n.svg" alt="computer" />
     <p className="track-tix-bx">Track your tickets and orders,<br /> Make payment for your order</p>
     <p>Check the status of your ticket or your order and engage</p>
 
