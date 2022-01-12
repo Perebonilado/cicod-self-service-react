@@ -12,7 +12,7 @@ const AddMessageBx = ({handleClose, handleChange, newMsg, handleSave}) => {
     <div className="attach-bx">
         <a href="" type="submit" className="link btn" onClick={handleSave}>Save</a>
         <a href="" className="link btn"><img src="https://res.cloudinary.com/dt0wfaxft/image/upload/v1641987482/Group_7894_rquput.svg" alt="attach-document" /> Attach file</a>
-        <div>Document1.pdf <img src="./images/Path 4059.svg" alt="" /></div>
+        <div>Document1.pdf <img src="https://res.cloudinary.com/dt0wfaxft/image/upload/v1641997779/Path_4059_axlmhy.svg" alt="" /></div>
     </div>
 
     </div>
