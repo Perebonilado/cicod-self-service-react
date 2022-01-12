@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 import Home from './screens/Home'
 import StatusHistory from './screens/StatusHistory';
+import TicketInfo from './screens/TicketInfo';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
         <Route path='/' element={<Home />} exact />
         <Route path='/statushistory' element={<StatusHistory />} exact />
+        <Route path='/ticketinfo' element={<TicketInfo />} exact />
 
 
       </Routes>
