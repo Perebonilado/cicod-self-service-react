@@ -42,7 +42,7 @@ const TicketView = () => {
 
         <section id="sh-thread"  className="status-history-container">
         
-     <div className="sh-heading-bx">
+     <div className="sh-heading-bx" style={{marginBottom:'4rem'}}>
             <h3>Status History</h3>
             <p>If you have questions or issues with this ticket, <b>reply on the comment section on the Current Status</b></p>
     </div>
