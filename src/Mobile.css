@@ -22,6 +22,11 @@
         width: 100vw;
     }
 
+    .home button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
     .main-content input{
         width: 400px;
     }
@@ -200,6 +205,10 @@
     .tv-bx-2 a {
         width:250px ;
         text-align: center;
+    }
+
+    .tv-bx-2 button {
+        width: 250px ;
     }
 
     .tv-bx-2 input{

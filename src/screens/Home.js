@@ -1,6 +1,9 @@
 import '../App.css'
 import '../Mobile.css'
 import { useState } from 'react'
+import InputField from '../components/InputField'
+import Button from '../components/Button'
+
 
 const Home = () => {
     
@@ -25,17 +28,13 @@ const Home = () => {
     <p className="track-tix-bx">Track your tickets and orders,<br /> Make payment for your order</p>
     <p>Check the status of your ticket or your order and engage</p>
 
-    <form action="/" method="GET" className="input-bx" onSubmit={handleSubmit}>
+    <form action="/" method="GET" className="input-bx home" onSubmit={handleSubmit}>
         
-        <input 
-        type="text" 
-        id="ticket-id" 
-        placeholder="Enter ticker ID or Order ID" 
-        value={inputVal} 
-        onChange={(e)=>{handleInput(e)}}
-        name='ticket-id'
+        <InputField 
+            inputVal={inputVal}
+            handleInput={(e)=>handleInput(e)}
         />
-        <button type='submit' className="btn link">Track</button>
+        <Button text={'Track'} />
     </form>
 </div>
 

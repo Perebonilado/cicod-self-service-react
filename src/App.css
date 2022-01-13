@@ -204,6 +204,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 3rem;
 }
 
 footer>p{
@@ -491,6 +492,7 @@ footer>p{
     padding: 0 14rem;
     margin-top: 4rem;
 }
+
 
 .sh-heading-bx h3{
     font-size: 18px;

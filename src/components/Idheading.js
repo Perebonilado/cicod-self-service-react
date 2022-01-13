@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import InputField from './InputField'
+import Button from './Button'
 
 const Idheading = ({ticketId}) => {
     
@@ -23,8 +25,11 @@ const Idheading = ({ticketId}) => {
             
             <form action="/" method="GET" className="tv-bx-2" onSubmit={handleSubmit}>
                     <p>Ticket/Order ID</p>
-                    <input type="text" placeholder="Enter ticket ID/order ID" value={inputVal} onChange={(e)=>{handleInput(e)}} />
-                    <a href="#" type='submit' className="btn link">Track</a>
+                    <InputField 
+            inputVal={inputVal}
+            handleInput={(e)=>handleInput(e)}
+        />
+        <Button text={'Track'} />
             </form>
 
     

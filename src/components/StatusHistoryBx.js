@@ -1,6 +1,6 @@
 const StatusHistoryBx = ({status, date, time, comment}) => {
     return (   
-    <div className="status-history-bx">
+    <div className="status-history-bx" style={{margin: '2rem 0'}}>
     <div className="status-bx status-item-1">
         <div className="bold-text">Status</div>
         <div className="status">{status}</div>

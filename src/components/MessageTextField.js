@@ -1,4 +1,4 @@
-const AddMessageBx = ({handleClose, handleChange, newMsg, handleSave}) => {
+const MessageTextField = ({handleClose, handleChange, newMsg, handleSave}) => {
     return ( 
     <div className="chat-bx ti-cb reply-bx">
                     
@@ -18,5 +18,5 @@ const AddMessageBx = ({handleClose, handleChange, newMsg, handleSave}) => {
     </div>
      );
 }
-
-export default AddMessageBx
+ 
+export default MessageTextField;

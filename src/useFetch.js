@@ -28,8 +28,42 @@ export const useFetch=()=>{
         senderName: 'James OluwaSeun',
         senderTime: '14:04:15',
         senderDate: 'Thursday Jul 16, 2021',
-        senderMessage: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum error fuga quibusdam ducimus dicta at accusantium dolorum.'
-        }]
+        senderMessage: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum error fuga quibusdam ducimus dicta at accusantium dolorum.',
+        isReply: true,
+        attachment: 'Document 1'
+        },
+    
+        {
+        id: 311,
+        senderName: 'James OluwaSeun',
+        senderTime: '14:04:15',
+        senderDate: 'Thursday Jul 16, 2021',
+        senderMessage: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum error fuga quibusdam ducimus dicta at accusantium dolorum.',
+        isReply: false,
+        attachment: ''
+        },
+    
+        {
+        id: 341,
+        senderName: 'James OluwaSeun',
+        senderTime: '14:04:15',
+        senderDate: 'Thursday Jul 16, 2021',
+        senderMessage: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum error fuga quibusdam ducimus dicta at accusantium dolorum.',
+        isReply: true,
+        attachment: ''
+        },
+    
+        {
+        id: 141,
+        senderName: 'James OluwaSeun',
+        senderTime: '14:04:15',
+        senderDate: 'Thursday Jul 16, 2021',
+        senderMessage: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illum error fuga quibusdam ducimus dicta at accusantium dolorum.',
+        isReply: false,
+        attachment: 'Document 23'
+        },
+    
+    ]
 
     const responseData = [
         {
